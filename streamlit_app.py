@@ -3,6 +3,7 @@
 
 import pandas as pd
 import streamlit as st
+import sklearn
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt
