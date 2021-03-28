@@ -149,7 +149,7 @@ with sections_source:
 
     genres = "<center><img src='https://i.imgur.com/OnDuwwC.png'</center>"
     st.markdown(genres, unsafe_allow_html=True,)
-    st.markdown(" "))
+    st.markdown(" ")
 
 data_source = st.beta_expander('📁 Where the book data come from? 📁')
 
