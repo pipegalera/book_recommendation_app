@@ -147,9 +147,9 @@ sections_source = st.beta_expander('📚 What kind of books or sections the app 
 with sections_source:
     st.markdown("The app takes approximatelly 1250 books from the following 40 topics:")
 
-    image_genre = Image.open(r"images\Genres.png")
-
-    st.image(image_genre)
+    genres = "<center><img src='https://i.imgur.com/OnDuwwC.png'</center>"
+    st.markdown(genres, unsafe_allow_html=True,)
+    st.markdown(" "))
 
 data_source = st.beta_expander('📁 Where the book data come from? 📁')
 
