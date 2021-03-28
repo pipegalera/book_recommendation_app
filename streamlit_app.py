@@ -10,12 +10,13 @@ import matplotlib.pyplot as plt
 import requests
 from PIL import Image
 from io import BytesIO
+import os
 
 st.set_page_config(layout="wide")
 
 # --------------------------------- Data and Variables ----------------------------#
 
-df = pd.read_csv(r'\data\good_reads_data_min.csv')
+df=pd.read_csv(r'https://raw.githubusercontent.com/pipegalera/book_recommendation_app/main/data/good_reads_data_min.csv')
 
 list_books = list(df.Title.unique())
 list_books.insert(0, '') #Makes the selection book bar start with nothing
