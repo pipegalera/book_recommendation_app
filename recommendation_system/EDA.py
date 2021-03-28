@@ -16,7 +16,7 @@ alt.renderers.enable('altair_viewer')
 
 # ----------------------- Data Exploration -------------------------#
 
-df = pd.read_csv(r'C:\Users\pipeg\Desktop\storytel_project\data\good_reads_data.csv')
+df = pd.read_csv(r'...\data\good_reads_data.csv')
 
 
 # N-gram distribution for the book description
