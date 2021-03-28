@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
 
 # --------------------------------- Data and Variables ----------------------------#
 
-df = pd.read_csv(r'C:\Users\pipeg\Desktop\storytel_project\data\good_reads_data_min.csv')
+df = pd.read_csv(r'data\good_reads_data_min.csv')
 
 list_books = list(df.Title.unique())
 list_books.insert(0, '') #Makes the selection book bar start with nothing
