@@ -74,7 +74,7 @@ with user_book_row:
 
 
 st.markdown("---")
-spacer_left, title_engine, spacer_right = st.beta_columns((.1, 2, .1))
+spacer_left, title_engine, spacer_right = st.beta_columns((.1, 3.2, .1))
 
 title_engine.header('Top 5 recommendations based on **{}**.'.format(user_book))
 
@@ -141,6 +141,7 @@ recommendation_engine(user_book)
 
 
 # ------------------------------------- How the recommendation engine work -----------------#
+
 spacer_left, bottom_spacing, spacer_right = st.beta_columns((.1, 2, .1))
 
 with bottom_spacing:
@@ -163,7 +164,7 @@ with bottom_spacing:
         st.markdown(" ")
         st.markdown("After the web scraper goes through all the book in a section or multiples sections, the final dataset looks similar with this (but with more books): ")
 
-        st.table(df.head(5))
+        st.dataframe(df.head(5))
 
     code_source = st.beta_expander('👨‍💻 Where can I find the code of this project? 👨‍💻')
 
