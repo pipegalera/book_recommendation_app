@@ -161,6 +161,7 @@ with data_source:
     st.markdown(" ")
     st.markdown("After the web scraper goes through all the book in a section or multiples sections, the final dataset looks similar with this (but with more books): ")
     df.head(5)
+
 code_source = st.beta_expander('👨‍💻 Where can I find the code of this project? 👨‍💻')
 
 with code_source:
