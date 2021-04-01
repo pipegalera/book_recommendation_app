@@ -142,27 +142,28 @@ recommendation_engine(user_book)
 
 # ------------------------------------- How the recommendation engine work -----------------#
 
-sections_source = st.beta_expander('📚 What kind of books or sections the app takes to compare books? 📚')
+with user_book_row:
+    sections_source = st.beta_expander('📚 What kind of books or sections the app takes to compare books? 📚')
 
-with sections_source:
-    st.markdown("The app takes approximatelly 1250 books from the following 40 topics:")
+    with sections_source:
+        st.markdown("The app takes approximatelly 1250 books from the following 40 topics:")
 
-    genres = "<center><img src='https://i.imgur.com/OnDuwwC.png'</center>"
-    st.markdown(genres, unsafe_allow_html=True,)
-    st.markdown(" ")
+        genres = "<center><img src='https://i.imgur.com/OnDuwwC.png'</center>"
+        st.markdown(genres, unsafe_allow_html=True,)
+        st.markdown(" ")
 
-data_source = st.beta_expander('📁 Where the book data come from? 📁')
+    data_source = st.beta_expander('📁 Where the book data come from? 📁')
 
-with data_source:
-    st.markdown("The data comes from Goodreads. I have created a Goodreads web scraper that goes through the most popular sections (called *shelves* in Goodreads). This *web scraper* is basically a bot that though the Goodreads website clicking in every book and storing the information relative to each book.")
+    with data_source:
+        st.markdown("The data comes from Goodreads. I have created a Goodreads web scraper that goes through the most popular sections (called *shelves* in Goodreads). This *web scraper* is basically a bot that though the Goodreads website clicking in every book and storing the information relative to each book.")
 
-    scraper = "<center><img src='https://i.imgur.com/KtGRuqK.gif'</center>"
-    st.markdown(scraper, unsafe_allow_html=True,)
-    st.markdown(" ")
-    st.markdown("After the web scraper goes through all the book in a section or multiples sections, the final dataset looks similar with this (but with more books): ")
-    df.head(5)
+        scraper = "<center><img src='https://i.imgur.com/KtGRuqK.gif'</center>"
+        st.markdown(scraper, unsafe_allow_html=True,)
+        st.markdown(" ")
+        st.markdown("After the web scraper goes through all the book in a section or multiples sections, the final dataset looks similar with this (but with more books): ")
+        df.head(5)
 
-code_source = st.beta_expander('👨‍💻 Where can I find the code of this project? 👨‍💻')
+    code_source = st.beta_expander('👨‍💻 Where can I find the code of this project? 👨‍💻')
 
-with code_source:
-    st.markdown("All the code is open source and available in [my project github repository](https://github.com/pipegalera/book_recommendation_app).")
+    with code_source:
+        st.markdown("All the code is open source and available in [my project github repository](https://github.com/pipegalera/book_recommendation_app).")
