@@ -141,8 +141,9 @@ recommendation_engine(user_book)
 
 
 # ------------------------------------- How the recommendation engine work -----------------#
+spacer_left, bottom_spacing, spacer_right = st.beta_columns((.1, 2, .1))
 
-with user_book_row:
+with bottom_spacing:
     sections_source = st.beta_expander('📚 What kind of books or sections the app takes to compare books? 📚')
 
     with sections_source:
@@ -161,7 +162,8 @@ with user_book_row:
         st.markdown(scraper, unsafe_allow_html=True,)
         st.markdown(" ")
         st.markdown("After the web scraper goes through all the book in a section or multiples sections, the final dataset looks similar with this (but with more books): ")
-        df.head(5)
+
+        st.table(df.head(5))
 
     code_source = st.beta_expander('👨‍💻 Where can I find the code of this project? 👨‍💻')
 
