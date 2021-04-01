@@ -50,7 +50,7 @@ spacer_left, sub_header, spacer_right = st.beta_columns((.1, 3.2, .1))
 with sub_header:
         st.markdown("Welcome to Pipe's book recommendation app. The app compares the descriptions of more than 30.000 books to give a similar recommendation to the book that you like. It contains 40 book categories, so feel free to type any kind of book.")
 
-        st.markdown("**To begin, please type a book that you liked (or just use any of these three books that I love!).** 👇")
+        st.markdown("**To begin, please type a book that you liked (or just use try with any of these three books that I love!).** 👇")
 
 # ----------------------------------- Main selector --------------------------------#
 
@@ -123,7 +123,7 @@ def recommendation_engine(user_book, engine = 'CountVectorizer'):
     fig, ax = plt.subplots(nrows=1, ncols=5, figsize=(15, 7), dpi=80)
 
     with user_book_row:
-        st.header('Top 5 recommendations based on **{}**.'.format(user_book))
+        st.header('Top 5 recommendations based on **{}**:'.format(user_book))
         for i in range(similar_books_df.shape[0]):
                 url_image = similar_books_df['Book image'].iloc[i]
                 response = requests.get(url_image)
