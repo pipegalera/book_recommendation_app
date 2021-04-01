@@ -74,8 +74,7 @@ with user_book_row:
 
 
 st.markdown("---")
-spacer_left, title_engine, spacer_right = st.beta_columns(
-    (.1, 2, .1))
+spacer_left, title_engine, spacer_right = st.beta_columns((.1, 2, .1))
 
 title_engine.header('Top 5 recommendations based on **{}**.'.format(user_book))
 
@@ -126,15 +125,16 @@ def recommendation_engine(user_book, engine = 'CountVectorizer'):
     # Print the 5 book covers
     fig, ax = plt.subplots(nrows=1, ncols=5, figsize=(15, 7), dpi=80)
 
-    for i in range(similar_books_df.shape[0]):
-            url_image = similar_books_df['Book image'].iloc[i]
-            response = requests.get(url_image)
-            book_image = Image.open(BytesIO(response.content))
-            ax[i].imshow(book_image)
-            ax[i].axis('off')
-    fig
+    with user_book_row:
+        for i in range(similar_books_df.shape[0]):
+                url_image = similar_books_df['Book image'].iloc[i]
+                response = requests.get(url_image)
+                book_image = Image.open(BytesIO(response.content))
+                ax[i].imshow(book_image)
+                ax[i].axis('off')
+        fig
 
-    st.table(similar_books_df.iloc[:, :5].assign(hack='').set_index('hack'))
+        st.table(similar_books_df.iloc[:, :5].assign(hack='').set_index('hack'))
 
 recommendation_engine(user_book)
 
