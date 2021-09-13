@@ -1,6 +1,11 @@
 ## Book recommendaiton App.
 
-Contentbase book recommendation app built with Python and deployed using Streamlit. 
+Content-based book recommendation app built with Python and deployed using Streamlit. 
+
+![Preview](https://i.imgur.com/tTfJAcK.gif)
+
+
+:rotating_light: Not mobile friendly :rotating_light:
 
 Live:
 
